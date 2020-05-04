@@ -1,94 +1,186 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
 
-    <title>Nancy Eckenthal Personal Site</title>
-    <meta name="description" content="Nancy Eckenthal Personal Site" />
-    <meta name="author" content="Nancy Eckenthal" />
-    <!-- Photo by Andrew Buchanan on Unsplash -->
-    <!-- Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-    <!-- Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
-    <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+<head>
+  <meta charset="utf-8" />
 
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <title>Nancy Eckenthal Personal Site</title>
+  <meta name="description" content="Nancy Eckenthal Personal Site" />
+  <meta name="author" content="Nancy Eckenthal" />
+  <!-- Photo by Andrew Buchanan on Unsplash -->
+  <!-- Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+  <!-- Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+  <!-- Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
 
-  <body>
-      <section class="nav">
-        <div class="buttons">
-            <a href="#experience"><button>Experience</button></a>
-            <a href="#projects"><button>Projects</button></a>
-          </div>
-      </section>
-    <section class="header">
-      <div class="intro-wrapper">
-        <div class="intro">
-          <div id="pic">
-            <img class="headshot" src="images/headshot.png" />
-          </div>
-          <div class="text">
-            <h2 id="name">Hi, I'm Nancy</h2>
-            <p id="details">
-              A whole bunch of information about me wow look at all this content
-              holy moly this is so many words my goodness gracious such detail
-              wow
-            </p>
-            <p>
-              Here's some extra information about me, maybe more light-hearted
-              and stuff
-            </p>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section id="top" class="header">
+    <div class="header-holder"></div>
+    <div class="intro-wrapper">
+      <div class="intro">
+        <div id="pic">
+          <img class="headshot" src="images/headshot.png" />
+        </div>
+        <div class="text">
+          <div id="name">Hi, I'm Nancy</div>
+          <div id="details">
+            <p>I'm a Software Engineer based in Boston, and I currently work at AdmitHub.</p>
+            <p>I enjoy working on a collaborative team to build intuitive and thoroughly-tested fullstack features from
+              start to finish.</p>
           </div>
         </div>
-        <div class="icons">
-          <a href="https://github.com/neckenth/" target="_blank"
-            ><img src="images/github.png" alt="link to GitHub"
-          /></a>
-          <a href="https://www.linkedin.com/in/nancyeckenthal/" target="_blank"
-            ><img src="images/linkedin.png"
-          /></a>
+      </div>
+      <div class="icons" id="sticky-header">
+        <a href="https://github.com/neckenth/" target="_blank"><img src="images/github.png" alt="link to GitHub" /></a>
+        <a href="https://www.linkedin.com/in/nancyeckenthal/" target="_blank"><img src="images/linkedin.png" /></a>
+        <div class="email">
+          <div>Copy my email</div>
           <img class="email" src="images/envelope.png" />
         </div>
       </div>
-    </section>
-    <section class="main">
-      <div class="contents">
-        <!-- <div class="buttons">
-          <a href="#experience"><button>Experience</button></a>
-          <a href="#projects"><button>Projects</button></a>
-        </div> -->
+      <div class="buttons">
+        <a href="#experience"><button>Experience</button></a>
+        <a href="#projects"><button>Projects</button></a>
       </div>
-      <!-- <div class="absolute-wrapper"></div> -->
-      <div class="further">
-        <div id="experience">
-          <h5>Experience</h5>
-          <ul>
-            <li>I've worked at this place</li>
-            <li>And this placce</li>
-            <li>Oh, and this place too</li>
-          </ul>
-        </div>
-        <div id="projects">
-          <h5>Projects</h5>
-          <p>I've done a few projects here are some links to them</p>
-          <ul>
-            <li>Orange Line Project</li>
-            <li>EZ-QL</li>
-            <li>MySymptoms MS</li>
-          </ul>
-          <p>
-            Oh, and here are some projects from my current job I'm most proud of
-          </p>
-          <ul>
-            <li>CSV ingestion pipeline</li>
-            <li>Public API</li>
-            <li>Personalization</li>
-          </ul>
+    </div>
+  </section>
+  <section class="main">
+    <div class="contents"></div>
+    <div class="further">
+      <div id="experience" class="section">
+        <p class="section-title">Where I've Worked</p>
+        <div class="jobs">
+          <div class="job">
+            <div class="when-and-where">
+              <div class="location">AdmitHub</div>
+              <div class="title">Junior Software Engineer</div>
+              <div class="timeline">January 2019 - Present</div>
+            </div>
+            <div class="job-details">
+              <p>
+                Contribute to production of a variety of internal- and
+                external-facing fullstack projects.
+              </p>
+              <p>
+                Work with a different languages, frameworks, and tools such as
+                Python, Typescript, Django/DRF, React/Redux, and Heroku...
+              </p>
+              <p>
+                A few projects I'm proud of having built with my team:
+              </p>
+              <ul class="proj-list">
+                <li>
+                  CSV ingestion pipeline
+                </li>
+                <li>
+                  Public API
+                </li>
+                <li>
+                  Email Escalation User Interface
+                </li>
+                <li>
+                  Personalized Conversations
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when-and-where">
+              <div class="location">
+                Ellevation Education
+              </div>
+              <div class="title">Data Integration Specialist</div>
+              <div class="timeline">June 2016 - August 2018</div>
+            </div>
+            <div class="job-details">
+              <p>
+                Configured data integrations for K-12 school districts notably
+                large, enterprise accounts such as Miami-Dade County FL,
+                Broward County FL, Houston TX
+              </p>
+
+              <p>
+                Provisioned SFTP server credentials, wrote custom Python
+                scripts, and scheduled recurring crons to fetch, process, and
+                import CSV files.
+              </p>
+            </div>
+          </div>
+          <div class="job">
+            <div class="when-and-where">
+              <div class="location">
+                Ellevation Education
+              </div>
+              <div class="title">Partner Support Coordinator</div>
+              <div class="timeline">May 2015 - June 2016</div>
+            </div>
+            <div class="job-details">
+              <p>
+                Responded to all incoming partner product- and data-related
+                questions via ZenDesk.
+              </p>
+              <p>Authored product usage documentation in HTML</p>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <div id="snackbar">Nancy's email copied to clipboard</div>
-    <script src="index.js"></script>
-  </body>
+      <div id="projects" class="section">
+        <p class="section-title">Projects</p>
+        <div class="proj">
+          <div class="proj-title">Orange Line Project</div>
+          <div class="proj-details">
+            <div>
+              Node app that consumes MBTA Public API and shows users where the
+              <strong>new</strong>Orange Line trains are on the route map
+            </div>
+            <a href="http://orange-line-prod.herokuapp.com/">
+              <div>Production site</div>
+            </a>
+            <a href="https://github.com/neckenth/oranges">
+              <div>Source code</div>
+            </a>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj-title">MySymptoms MS</div>
+          <div class="proj-details">
+            <div>
+              Chrome Extension for tracking various MS symptoms on a
+              recurring basis and storing results in a connected Google
+              Sheet for later analysis
+            </div>
+            <div>
+              Written in Vanilla JS, HTML, and CSS and leveraging the Google
+              Sheets and Authentication APIs as well as the Chrome
+              Extensions API
+            </div>
+            <a href="https://github.com/neckenth/my-symptoms-ms">
+              <div>Source code</div>
+            </a>
+          </div>
+        </div>
+        <div class="proj">
+          <div class="proj-title">This Personal Site</div>
+          <div class="proj-details">
+            <div>Written in Vanilla JS, HTML, CSS</div>
+            <a href="https://github.com/neckenth/personal">
+              <div>Source code</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <div class="footer"></div>
+  <a href="#top">
+    <button class="top-button" id="top-button">Back to top</button>
+  </a>
+  <div id="snackbar">Nancy's email copied to clipboard</div>
+  <script src="index.js"></script>
+</body>
+
 </html>

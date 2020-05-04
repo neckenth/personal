@@ -1,35 +1,41 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+
 }
 
 body {
   font-family: "Courier", Courier, monospace;
-  background-image: url("images/background_transparent.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  margin-left: 0;
+  margin-right: 0;
 }
 
-.nav .buttons {
-    position: fixed;
-    top: 0;
-    right: 0;
-    display: flex;
-    justify-content: end;
+.buttons {
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.nav .buttons a button {
-    cursor: pointer;
-    width: 100%;
-    height: 50px;
-    border-radius: 5%;
-    background-color: black;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    font-family: "Courier", Courier, monospace;
-  }
+a button {
+  cursor: pointer;
+  height: 50px;
+  border-radius: 5%;
+  background-color: black;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-family: "Courier", Courier, monospace;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
 
 #pic img {
   width: 15em;
@@ -40,10 +46,31 @@ body {
   border: solid;
 }
 
+
+
 .header {
   padding-top: 10%;
   align-items: center;
+  height: 100vh;
 }
+
+.header-holder {
+  position: fixed;
+  top: 0;
+  margin-top: 0%;
+  width: 100%;
+  height: 60px;
+  background-color: darkgreen;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: darkgreen;
+}
+
 
 .header .intro-wrapper {
   display: flex;
@@ -59,64 +86,140 @@ body {
   margin-bottom: 2%;
 }
 
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgreen;
+  width: 100%;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 0%;
+  margin-top: 3px;
+  margin-right: 0%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.main {
+  padding-top: 102px;
+}
+
+#name {
+  font-size: 2em;
+}
+
 .intro #pic {
   width: 50%;
 }
-.intro text {
+
+.intro .text {
   width: 50%;
 }
 
-.header p {
-  margin-left: 10%;
-  margin-right: 10%;
+.intro .text #details p {
+  font-size: 18px;
 }
 
 .icons {
   display: flex;
   justify-content: space-around;
-  margin-left: 40%;
-  margin-right: 40%;
   margin-bottom: 2%;
-  cursor: pointer;
 }
 
 .icons img {
   height: 40px;
   width: 40px;
+  cursor: pointer
+}
+
+.email img {
+  height: 30px;
+  width: 30px;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input .email {
   display: hidden;
 }
 
-.main .contents {
-    display: flex;
-    flex-direction: column;
-    /* position: absolute; */
+.main {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .main .contents {
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .contents {
+  height: 100%;
 }
 
 .main .contents .buttons {
-    padding-bottom: 10px;
-    /* position: fixed; */
-    height: 100%;
-    width: 100%;
-    bottom: 20px;
+  padding-bottom: 10px;
+  height: 100%;
+  width: 100%;
+  bottom: 20px;
   display: flex;
   justify-content: space-around;
 }
 
+.section {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  height: 100vh;
+  align-items: flex-start;
+  align-content: space-around;
+  justify-content: center;
+}
 
+.section-title {
+  font-size: 22px;
+}
 
-/* .main .contents .absolute-wrapper {
-    height: 100%;
-} */
+.location {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-.further {
-  /* position: relative; */
+.timeline,
+.title {
+  font-size: 16px;
+}
+
+.when-and-where,
+.proj-title {
+  align-self: center;
+  white-space: nowrap;
+  margin-right: 2em;
+}
+
+.job-details p,
+ul,
+li,
+.proj-details {
+  font-size: 15px;
+}
+
+.job,
+.proj {
+  border: 2px solid black;
+  border-radius: 1%;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
 }
 
 #snackbar {
@@ -132,7 +235,8 @@ input .email {
 }
 
 #snackbar.show {
-  visibility: visible; /* Show the snackbar */
+  visibility: visible;
+  /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
     However, delay the fade out process for 2.5 seconds */
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -145,6 +249,7 @@ input .email {
     top: 0;
     opacity: 0;
   }
+
   to {
     top: 5%;
     opacity: 1;
@@ -156,6 +261,7 @@ input .email {
     top: 0;
     opacity: 0;
   }
+
   to {
     top: 5%;
     opacity: 1;
@@ -167,6 +273,7 @@ input .email {
     top: 5%;
     opacity: 1;
   }
+
   to {
     top: 0;
     opacity: 0;
@@ -178,8 +285,24 @@ input .email {
     top: 5%;
     opacity: 1;
   }
+
   to {
     top: 0;
     opacity: 0;
   }
+}
+
+#top-button {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  visibility: hidden;
+}
+
+#top-button.show {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  visibility: visible;
+  ;
 }
