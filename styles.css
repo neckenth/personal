@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: "Courier", Courier, monospace;
+  font-family: "Roboto Mono", monospace;
   margin-left: 0;
   margin-right: 0;
 }
@@ -13,20 +13,18 @@ body {
   top: 0;
   right: 0;
   display: flex;
-  justify-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 a button {
   cursor: pointer;
   height: 50px;
   border-radius: 5%;
-  background-color: black;
-  color: white;
-  padding: 16px;
+  color: black;
+  background-color: darkgray;
   font-size: 16px;
-  font-family: "Courier", Courier, monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 li {
@@ -60,7 +58,6 @@ p {
   margin-top: 0%;
   width: 100%;
   height: 60px;
-  background-color: darkgreen;
 }
 
 .footer {
@@ -68,7 +65,6 @@ p {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: darkgreen;
 }
 
 
@@ -94,7 +90,6 @@ p {
   top: 0px;
   display: flex;
   justify-content: space-around;
-  background-color: darkgreen;
   width: 100%;
   padding-top: 3px;
   padding-bottom: 3px;
@@ -126,19 +121,15 @@ p {
 
 .icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-bottom: 2%;
+  align-items: center;
 }
 
 .icons img {
   height: 40px;
   width: 40px;
   cursor: pointer
-}
-
-.email img {
-  height: 30px;
-  width: 30px;
 }
 
 .email {
@@ -171,7 +162,7 @@ input .email {
   width: 100%;
   bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .section {
@@ -230,8 +221,7 @@ li,
   right: 5%;
   padding: 16px;
   background-color: darkgrey;
-  color: black;
-  min-width: 300px;
+  color: black;  
 }
 
 #snackbar.show {

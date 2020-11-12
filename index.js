@@ -1,3 +1,14 @@
+window.onload = () => {
+  const colors = ["crimson", "darkgreen", "orangered", "cyan", "purple"];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+  const divs = document.getElementsByClassName("random");
+
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].style.background = randomColor;
+  }
+};
+
 const copyToClipboard = () => {
   /* create a fake input element */
   const input = document.createElement("input");
@@ -42,7 +53,6 @@ const showBackToTopButton = () => {
   if (window.pageYOffset <= 10) {
     topButton.className = topButton.className.replace("show", "");
   } else {
-    console.log("here");
     topButton.className = "show";
   }
 };
